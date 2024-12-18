@@ -4,6 +4,6 @@ Grupo:
 
 Anna Carolina Farias RA: 811448
 
-Eugênio RA:
+Eugênio Akinori Kisi Nishimiya RA: 811598
 
 Nataly RA:
