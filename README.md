@@ -6,4 +6,4 @@ Anna Carolina Farias RA: 811448
 
 Eugênio Akinori Kisi Nishimiya RA: 811598
 
-Nataly RA:
+Nataly Cristina da Silva RA: 812719
