@@ -1,59 +1,59 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout}">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pesquisa e Cartões de Trabalho</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{/css/style-home.css}">
+
 </head>
 <body>
-    <section class="layout-content" layout:fragment="corpo">
 
-        <div class="container" style="text-align: center;">
-            <h1 th:text="#{title.label}"></h1>
+    
+  <div class="rectangle">
+    <div class="'title-container">
+      <h2>Sistema de Oferta de Emprego/Vaga</h2>
+    </div>
+      <div class="search_bar">
+          <input type="text" placeholder="Pesquisar..." />
+          <button class="btn btn-primary">Search</button>
+      </div>
+  </div> <!-- Retângulo no início da página -->
+
+<div class="container">
+
+    <div class="job_card">
+        <div class="job_details">
+            <div class="text">
+                <h2>Desenvolvedor Full-Stack</h2>
+                <h3><i class='bx bxs-buildings' style="color: #0ef;"></i> Amazon</h3>
+                <h4><i class='bx bx-dollar-circle' style="color: #0ef;"></i> R$7 mil</h4>
+                <h5><i class='bx bxs-map' style="color: #0ef;"></i> São Paulo</h5>
+                <h6><i class='bx bx-calendar' style="color: #0ef;"></i> Data Limite: 10/02/2025</h6>
+            </div> 
         </div>
+    </div>
 
-        <nav class="navbar navbar-expand-md bg-light">
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <i class="oi oi-caret-right"></i>
-                        <span th:text="#{vaga.listar.label}"></span>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <div class="container" id="listagem">
-            <form th:action="@{/home/buscar}" method="post">
-                <input type="text" name="cidade" id="cidade" th:placeholder="#{pesquisarCidade.label}" required>
-                <button type="submit" class="btn btn-primary btn-sm" th:text="#{pesquisar.label}">Pesquisar</button>
-            </form>
-            <div th:replace="~{fragments/alert}"></div>
-
-            <div class="table-responsive">
-                <table class="table table-striped table-hover table-sm">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th th:text="#{vaga.descricao.label}"></th>
-                            <th th:text="#{vaga.empresa.label}"></th>
-							<th th:text="#{vaga.remuneracao.label}"></th>
-                            <th th:text="#{vaga.cidade.label}"></th>
-                            <th th:text="#{vaga.datalimite.label}"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="vaga : ${vagas}">
-                            <td th:text="${vaga.id}"></td>
-                            <td th:text="${vaga.descricao}"></td>
-							<td th:text="${vaga.empresa.name}"></td>
-                            <td th:text="${vaga.remuneracao}"></td>
-							<td th:text="${vaga.empresa.cidade}"></td>
-							<td th:text="${vaga.dataLimite}"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="job_card">
+        <div class="job_details">
+            <div class="text">
+                <h2>Desenvolvedor Full-Stack</h2>
+                <h3><i class='bx bxs-buildings' style="color: #0ef;"></i> Amazon</h3>
+                <h4><i class='bx bx-dollar-circle' style="color: #0ef;"></i> R$7 mil</h4>
+                <h5><i class='bx bxs-map' style="color: #0ef;"></i> São Paulo</h5>
+                <h6><i class='bx bx-calendar' style="color: #0ef;"></i> Data Limite: 10/02/2025</h6>
+            </div> 
         </div>
-    </section>
+    </div>
+    </div>
+
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

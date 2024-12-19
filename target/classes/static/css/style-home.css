@@ -1,0 +1,73 @@
+body {
+    background: #081b29;
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    padding: 20px;
+  }
+  .rectangle {
+    background: linear-gradient(45deg, #081b29, #0ef);
+    border-bottom: 3px solid #0ef; 
+    box-shadow: 0 0 25px #0ef;
+    width: 100%; /* Largura total da tela */
+    height: 300px; /* Altura do retângulo */
+    border-radius: 0 0 20% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Ajusta o padding interno para o nome e o search */
+    color: white; /* Cor do texto para contraste */
+    font-size: 1.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto dentro do retângulo */
+  }
+  
+  .title-container {
+    margin-bottom: 20px; /* Espaço acima do título */
+  }
+  
+  .job_card {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #0ef;
+    display: flex;
+    border-radius: 10px;
+    background: transparent;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    border: 2px solid #0ef;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  }
+  .job_details {
+    display: flex;
+    align-items: center;
+  }
+  .job_details .text {
+    color: white;
+    margin-left: 20px;
+  }
+  .search_bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .search_bar input {
+    width: calc(100% - 100px);
+    padding: 12px; /* Aumenta o padding para maior tamanho */
+    border: 1px solid rgb(190, 190, 190);
+  }
+  .search_bar button {
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    .search_bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search_bar input, .search_bar button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+  }
+  
