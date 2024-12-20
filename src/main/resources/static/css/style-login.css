@@ -42,7 +42,7 @@ body {
 }
 
 .form-group h2{
-    font-size: 32px;
+    font-size: 36px;
     color: #fff;
     text-align: center;
 }
@@ -161,7 +161,7 @@ body {
 }
 
 .info-text h2{
-    font-size: 36px;
+    font-size: 46px;
     color: #fff;
     line-height: 1.3;
     text-transform: uppercase;
@@ -177,11 +177,54 @@ body {
     position:absolute;
     top: 0;
     right: 0; 
-    width: 850px;
-    height: 600px;
+    width: 950px;
+    height: 700px;
     background: linear-gradient(45deg, #081b29, #0ef);
     border-bottom: 3px solid #0ef; 
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
 
+}
+/* Consultas de mídia para responsividade */
+@media (max-width: 1150px) {
+    .form-group {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-text h2 {
+        display: none;
+    }
+
+    .form-group .form-box,
+    .form-group .info-text {
+        position: static;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .form-group .info-text {
+        padding: 0;
+    }
+
+
+    .info-text p {
+        display: none;
+
+    .btn-login {
+        width: 100%;
+        height: 60px;
+    }
+}
+}
+
+@media (max-width: 868px) {
+    .form-group {
+        padding: 20px;
+    }
+
+    .form-group .big-animate {
+        display: none;
+    }
 }
