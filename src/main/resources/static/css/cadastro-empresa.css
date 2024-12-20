@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #081b29;
+    font-family: "Poppins", sans-serif;   
+}
+
+.form-container {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: transparent;
+
+    border-radius: 23px;
+    border: 0.5px solid #0ef;
+    box-shadow: 0 0 25px #0ef;
+}
+
+form {
+    margin: 0 auto;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #fff
+}
+
+input.form-control {
+    width: 100%; 
+    padding: 10px; 
+    border: none;
+    border-bottom: 2px solid #0ef;
+    outline: none;
+    border-radius: 4px; 
+    font-size: 16px;
+    margin-bottom: 15px; 
+    box-sizing: border-box;
+    transition: 0.5s;
+
+    background-color: transparent;
+    color: #0ef
+}
+
+input.form-control:focus {
+    color: #fff;
+    outline: none; 
+    border-top: 2px solid #06335f;
+    border-left: 2px solid #06335f;
+    border-right: 2px solid #06335f;
+}
+
+button.btn {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #0ef;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+button.btn:hover {
+    background-color: #0ef;
+    color: #081b29;
+}
+
+.invalid-feedback {
+    color: #dc3545; 
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+input.is-invalid {
+    border-color: #dc3545; 
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+
+/* NAVBAR */
+.navbar {
+    height: 50px;
+    background-color: #0ef; 
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 10vh;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-jobfinder {
+    margin-left: -17vw;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; 
+}
+
+.navbar-links {
+    margin-right: -13vw;
+    display: flex;
+    gap: 20px; 
+}
+
+.nav-link-custom {
+    font-size: 18px;
+    color: #000; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: #555;
+}
+
+
+/* DROPDOWN */
+.navbar-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-label {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}
+
+.dropdown-label:hover {
+    color: #555;
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 8vw;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 4px;
+    display: none;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #000; 
+    color: #fff;
+
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 480px) {
+    .form-container {
+        display: flex;
+        width: 80%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        margin: auto;
+        background-color: transparent;
+    
+        border-radius: 23px;
+        border: 0.5px solid #0ef;
+        box-shadow: 0 0 25px #0ef;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        width: 100%; /* Ocupa toda a largura */
+        height: 100%;
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    /* Campos do formulário */
+    .form-group {
+        width: 100%; /* Ocupa toda a largura */
+        margin-top: 15px;
+    }
+
+    .form-control {
+        width: 100%; /* Campos ocupam toda a largura */
+        font-size: 16px; /* Fonte legível em dispositivos móveis */
+        /* padding: 10px; Mais fácil de tocar */
+    }
+
+    /* Labels */
+    label {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        margin-bottom: 5px; /* Espaço entre o label e o campo */
+        display: block; /* Garante que o label fique acima do campo */
+    }
+
+    /* Botão de envio */
+    button {
+        width: 100%; /* Botão ocupa toda a largura */
+        font-size: 16px; /* Fonte maior para acessibilidade */
+        margin-bottom: 20px; /* Espaçamento interno adequado */
+    }
+
+    /* Ajuste dos feedbacks de erro */
+    .invalid-feedback {
+        font-size: 12px; /* Texto menor para feedback */
+        color: red; /* Mantenha visível */
+        margin-top: 5px;
+    }
+
+    .navbar {
+        height: 50px;
+        background-color: #0ef; 
+        padding: 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+        margin-bottom: 10vh;
+    }
+    
+    .navbar-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .navbar-jobfinder {
+        margin-left: -17vw;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000; 
+    }
+    
+    .navbar-links {
+        margin-right: -13vw;
+        display: flex;
+        gap: 20px; 
+    }
+    
+    .nav-link-custom {
+        font-size: 18px;
+        color: #000; 
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-link-custom:hover {
+        color: #555;
+    }
+    
+    
+    /* DROPDOWN */
+    .navbar-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .navbar-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-label {
+        font-size: 18px;
+        color: #000;
+        cursor: pointer;
+    }
+    
+    .dropdown-label:hover {
+        color: #555;
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        width: 8vw;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 4px;
+        display: none;
+        z-index: 10;
+    }
+    
+    .dropdown-item {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #000; 
+        color: #fff;
+    
+        transition: 0.5s;
+    }
+}
