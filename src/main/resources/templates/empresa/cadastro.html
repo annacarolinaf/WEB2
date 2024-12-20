@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html layout:decorate="~{layout}">
+<html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8" />
+<title>Cadastro de Empresas</title>
+<link rel="stylesheet" th:href="@{/css/cadastro-empresa.css}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
 </head>
+
 <body>
-	<section class="layout-content" layout:fragment="corpo">
 
-		<nav class="navbar navbar-expand-md bg-light">
-			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active"><i class="oi oi-caret-right"></i>
-						<span th:text="#{empresa.cadastrar.label}"></span></li>
-				</ul>
-				<a class="btn btn-primary btn-md" th:href="@{/empresas/listar}"
-					role="button"> <span class="oi oi-spreadsheet" title="Listar"
-					aria-hidden="true"></span> <span th:text="#{empresa.listar.label}"></span>
-				</a>
+	<nav class="navbar">
+		<div class="navbar-container">
+			<span class="navbar-jobfinder">JobFinder - Cadastro de Empresa</span>
+			<!-- Links de navegação -->
+			<div class="navbar-links">
+				<a href="#" class="nav-link-custom">Início</a>
+				<div class="navbar-dropdown">
+					<span class="dropdown-label">Empresas</span>
+					<ul class="dropdown-menu">
+						<li><a href="#" class="dropdown-item">Cadastro de Empresas</a></li>
+						<li><a href="#" class="dropdown-item">Listagem de Empresas</a></li>
+					</ul>
+				</div>
+				<div class="navbar-dropdown">
+					<span class="dropdown-label">Vagas</span>
+					<ul class="dropdown-menu">
+						<li><a href="#" class="dropdown-item">Cadastro de Vagas</a></li>
+						<li><a href="#" class="dropdown-item">Listagem de Vagas</a></li>
+					</ul>
+				</div>
 			</div>
-		</nav>
+		</div>
+	</nav>
+	
+	
 
-		<div class="container" id="cadastro">
-
-			<div th:replace="~{fragments/alert}"></div>
-
+		<div class="form-container" id="cadastro">
 			<form
 				th:action="${empresa.id == null} ? @{/empresas/salvar} : @{/empresas/editar}"
 				th:object="${empresa}" method="POST">
