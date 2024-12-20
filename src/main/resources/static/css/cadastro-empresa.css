@@ -137,6 +137,10 @@ input.is-invalid {
     gap: 20px; 
 }
 
+.navbar-links a {
+    margin-top: 0.25vh;
+}
+
 .nav-link-custom {
     font-size: 18px;
     color: #000; 
@@ -159,7 +163,14 @@ input.is-invalid {
     display: block;
 }
 
+.navbar-dropdown-responsive {
+    display: none;
+}
+
 .dropdown-label {
+    border: none;
+    outline: none;
+    background-color: transparent;
     font-size: 18px;
     color: #000;
     cursor: pointer;
@@ -181,7 +192,7 @@ input.is-invalid {
     margin: 0;
     border-radius: 4px;
     display: none;
-    z-index: 10;
+    /* z-index: 10; */
 }
 
 .dropdown-item {
@@ -200,7 +211,16 @@ input.is-invalid {
     transition: 0.5s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 412px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        width: 100%;
+        font-family: "Poppins", sans-serif; 
+    }
     .form-container {
         display: flex;
         width: 80%;
@@ -218,128 +238,86 @@ input.is-invalid {
 
     form {
         grid-template-columns: 1fr;
-        width: 100%; /* Ocupa toda a largura */
+        width: 100%; 
         height: 100%;
-        padding: 10px; /* Reduz o espaçamento interno */
+        padding: 10px; 
     }
 
-    /* Campos do formulário */
     .form-group {
-        width: 100%; /* Ocupa toda a largura */
+        width: 100%; 
         margin-top: 15px;
     }
 
     .form-control {
-        width: 100%; /* Campos ocupam toda a largura */
-        font-size: 16px; /* Fonte legível em dispositivos móveis */
-        /* padding: 10px; Mais fácil de tocar */
+        width: 100%; 
+        font-size: 16px; 
     }
 
-    /* Labels */
     label {
-        font-size: 14px; /* Reduz o tamanho da fonte */
-        margin-bottom: 5px; /* Espaço entre o label e o campo */
-        display: block; /* Garante que o label fique acima do campo */
+        font-size: 14px;
+        margin-bottom: 5px; 
+        display: block; 
     }
 
-    /* Botão de envio */
     button {
-        width: 100%; /* Botão ocupa toda a largura */
-        font-size: 16px; /* Fonte maior para acessibilidade */
-        margin-bottom: 20px; /* Espaçamento interno adequado */
+        width: 100%; 
+        font-size: 16px; 
+        margin-bottom: 20px;
     }
 
-    /* Ajuste dos feedbacks de erro */
     .invalid-feedback {
-        font-size: 12px; /* Texto menor para feedback */
-        color: red; /* Mantenha visível */
+        font-size: 12px; 
+        color: red;
         margin-top: 5px;
     }
-
+    
     .navbar {
-        height: 50px;
-        background-color: #0ef; 
-        padding: 10px 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
-        margin-bottom: 10vh;
+        height: auto;
+        padding: 0px 5px;
     }
-    
+
     .navbar-container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    
+
     .navbar-jobfinder {
-        margin-left: -17vw;
-        font-size: 24px;
-        font-weight: bold;
-        color: #000; 
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
     }
-    
+
     .navbar-links {
-        margin-right: -13vw;
-        display: flex;
-        gap: 20px; 
+        flex-direction: row;
+        padding-left: 22.5vw;
+        margin-right: 0;
+        width: 100%;
+        margin-top: 10px;
     }
-    
-    .nav-link-custom {
-        font-size: 18px;
-        color: #000; 
-        text-decoration: none;
-        transition: color 0.3s ease;
+
+    .navbar-links a {
+        padding-top: 1vh;
     }
-    
-    .nav-link-custom:hover {
-        color: #555;
-    }
-    
-    
-    /* DROPDOWN */
     .navbar-dropdown {
-        position: relative;
-        display: inline-block;
+        display: none;
     }
-    
-    .navbar-dropdown:hover .dropdown-menu {
+
+    .navbar-dropdown-responsive {
         display: block;
     }
-    
-    .dropdown-label {
-        font-size: 18px;
-        color: #000;
-        cursor: pointer;
-    }
-    
-    .dropdown-label:hover {
-        color: #555;
-    }
-    
-    .dropdown-menu {
-        position: absolute;
-        width: 8vw;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .dropdown-menu-responsive {
+        margin-top: -1vh;
+        margin-right: -10vw;
         list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        border-radius: 4px;
-        display: none;
-        z-index: 10;
+        display: flex;
+        flex-direction: column;
     }
-    
-    .dropdown-item {
-        padding: 10px 20px;
+
+    .dropdown-item-responsive {
+        padding: 1px 20px;
         font-size: 16px;
         color: #000;
         text-decoration: none;

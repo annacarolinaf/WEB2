@@ -5,6 +5,7 @@
 <meta charset="UTF-8" />
 <title>Cadastro de Empresas</title>
 <link rel="stylesheet" th:href="@{/css/cadastro-empresa.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 </head>
@@ -18,17 +19,25 @@
 			<div class="navbar-links">
 				<a href="#" class="nav-link-custom">Início</a>
 				<div class="navbar-dropdown">
-					<span class="dropdown-label">Empresas</span>
+					<button class="dropdown-label">Empresas<i class="fa fa-caret-down"></i></button>
 					<ul class="dropdown-menu">
 						<li><a href="#" class="dropdown-item">Cadastro de Empresas</a></li>
 						<li><a href="#" class="dropdown-item">Listagem de Empresas</a></li>
 					</ul>
 				</div>
 				<div class="navbar-dropdown">
-					<span class="dropdown-label">Vagas</span>
+					<button class="dropdown-label">Vagas<i class="fa fa-caret-down"></i></button>
 					<ul class="dropdown-menu">
 						<li><a href="#" class="dropdown-item">Cadastro de Vagas</a></li>
 						<li><a href="#" class="dropdown-item">Listagem de Vagas</a></li>
+					</ul>
+				</div>
+				<div class="navbar-dropdown-responsive">
+					<ul class="dropdown-menu-responsive">
+						<li><a href="#" class="dropdown-item-responsive">Cadastro de Empresas</a></li>
+						<li><a href="#" class="dropdown-item-responsive">Listagem de Empresas</a></li>
+						<li><a href="#" class="dropdown-item-responsive">Cadastro de Vagas</a></li>
+						<li><a href="#" class="dropdown-item-responsive">Listagem de Vagas</a></li>
 					</ul>
 				</div>
 			</div>
@@ -121,4 +130,12 @@
 		</div>
 	</section>
 </body>
+
+<script>
+	document.querySelectorAll('.navbar-dropdown').forEach(function(dropdown) {
+		dropdown.addEventListener('click', function() {
+			this.classList.toggle('active'); 
+		});
+	});
+</script>
 </html>
